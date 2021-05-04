@@ -52,3 +52,8 @@
   margin: 0;
   background-color: #ffffff;
 }
+
+
+.trumbowyg-box.trumbowyg-editor-hidden .trumbowyg-textarea {
+  min-height: inherit;
+}
