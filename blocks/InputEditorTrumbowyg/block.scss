@@ -42,6 +42,8 @@
 .trumbowyg-button-pane .trumbowyg-button-group::after
 {
   background-color: #ffffff;
+  width: 0;
+  margin: 0;
 }
 
 .trumbowyg-button-pane .trumbowyg-button-group.trumbowyg-right::after
