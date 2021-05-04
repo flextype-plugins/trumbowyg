@@ -1,0 +1,14 @@
+# enabled: true or false to disable the plugin
+enabled: true
+
+# Plugin priority
+priority: 40
+
+# Blocks
+blocks:
+  InputEditorTrumbowyg:
+    name: InputEditorTrumbowyg
+    template: plugins/trumbowyg/blocks/InputEditorTrumbowyg/block.html
+    assets:
+      css: project/plugins/trumbowyg/blocks/InputEditorTrumbowyg/dist/css/block.min.css
+      js: project/plugins/trumbowyg/blocks/InputEditorTrumbowyg/dist/js/block.min.js
