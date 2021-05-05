@@ -4,6 +4,10 @@ enabled: true
 # Plugin priority
 priority: 41
 
+# Place to load
+assetsLoadOnAdmin: true
+assetsLoadOnSite: false
+
 # Default Trumbowyg options
 defaultOptions: 
 
@@ -124,7 +128,6 @@ defaultOptions:
   
   # Disabled
   disabled: false
-
 
   # Button pane
   #
