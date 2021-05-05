@@ -34,12 +34,12 @@ The following dependencies need to be downloaded and installed for Trumbowyg Plu
 | assetsLoadOnSite | false | Place to load, Site. |
 | defaultOptions.lang | en | Localization <br><br> If the lang was not found, english values are used by default.|
 | defaultOptions.svgPath | `//path` | SVG icons <br><br> A pack of SVG icons is available and enabled by default. This file is loaded via XHR request in JavaScript so it is possible the path is not matching with your assets file paths. You can change the path of the SVG or disable this feature. <br><br> If you do not want SVG icons, you can set this option to `false`. <br><br> Then, you can add your custom icons by CSS or what you want. |
-| defaultOptions.lang |   semantic:
+| defaultOptions.lang | ``` semantic:
     'b': 'strong'
     'i': 'em'
     's': 'del'
     'strike': 'del'
-    'p': 'p' | Semantic <br><br> Generates a better, more semantic oriented HTML <br><br> (i.e. <em> instead of <i>, <strong> instead of <b>, etc.). |
+    'p': 'p' ``` | Semantic <br><br> Generates a better, more semantic oriented HTML <br><br> (i.e. <em> instead of <i>, <strong> instead of <b>, etc.). |
 
 ## LICENSE
 [The MIT License (MIT)](https://github.com/flextype-plugins/trumbowyg/blob/master/LICENSE.txt)
