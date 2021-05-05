@@ -14,8 +14,12 @@ namespace Flextype\Plugin\Trumbowyg;
 /**
  * Add Blueprint block `InputEditorTrumbowyg`
  */
-flextype('registry')->set('plugins.blueprints.settings.blocks.InputEditorTrumbowyg', flextype('registry')->get('plugins.trumbowyg.settings.blocks.InputEditorTrumbowyg'));       
+flextype('registry')->set('plugins.blueprints.settings.blocks.InputEditorTrumbowyg', 
+                          flextype('registry')->get('plugins.trumbowyg.settings.blocks.InputEditorTrumbowyg'));       
 
+/**
+ * Set Trumbowyg locale
+ */                         
 if (flextype('registry')->get('flextype.settings.locale') == 'en_US') {
     $locale = 'en';
     flextype('registry')->set('plugins.trumbowyg.settings.defaultOptions.lang', $locale);
@@ -24,6 +28,9 @@ if (flextype('registry')->get('flextype.settings.locale') == 'en_US') {
     flextype('registry')->set('plugins.trumbowyg.settings.defaultOptions.lang', $locale);
 }
 
+/**
+ * Add Trumbowyg assets
+ */ 
 $trumbowygCSS[] = 'project/plugins/trumbowyg/blocks/InputEditorTrumbowyg/dist/css/block.min.css';
 $trumbowygJS[]  = 'project/plugins/trumbowyg/blocks/InputEditorTrumbowyg/dist/js/block.min.js';
 
