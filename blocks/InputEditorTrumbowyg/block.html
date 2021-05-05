@@ -23,8 +23,18 @@
         <small>{{ __(properties.properties.help)}}</small>
     {% endif %}
     
+    {% if properties.properties.options %}
+        {% set defaultOptions = arrays(flextype.registry.get("plugins.trumbowyg.settings.defaultOptions")).toArray() %}
+        {% set blockOptions = arrays(properties.properties.options).toArray() %}
+        {% set options = arrays(defaultOptions).replace(blockOptions, true).toArray() %}
+    {% else %}
+        {% set options = flextype.registry.get("plugins.trumbowyg.settings.defaultOptions") %}
+    {% endif %}
+    
     <input type="hidden" name="{{ blockName }}-trumbowyg" value="{{ blockName }}">
-    <input type="hidden" name="{{ blockName }}-trumbowyg-options" value='{{ flextype.serializers.json.encode((properties.properties.options ?? flextype.registry.get("plugins.trumbowyg.settings.defaultOptions"))) }}'>
+    <input type="hidden" 
+           name="{{ blockName }}-trumbowyg-options" 
+           value='{{ flextype.serializers.json.encode(options) }}'>
 {% if properties.layout %}
 </div>
 {% endif %}
