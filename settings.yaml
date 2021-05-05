@@ -2,7 +2,7 @@
 enabled: true
 
 # Plugin priority
-priority: 40
+priority: 41
 
 # Default Trumbowyg options
 defaultOptions: 
@@ -150,6 +150,3 @@ blocks:
   InputEditorTrumbowyg:
     name: InputEditorTrumbowyg
     template: plugins/trumbowyg/blocks/InputEditorTrumbowyg/block.html
-    assets:
-      css: project/plugins/trumbowyg/blocks/InputEditorTrumbowyg/dist/css/block.min.css
-      js: project/plugins/trumbowyg/blocks/InputEditorTrumbowyg/dist/js/block.min.js
