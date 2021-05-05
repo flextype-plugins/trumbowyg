@@ -8,14 +8,13 @@ Light, translatable and customisable WYSIWYG editor for Flextype.
 
 ## Dependencies
 
-The following dependencies need to be installed for Trumbowyg Plugin.
-
-## System
+The following dependencies need to be downloaded and installed for Trumbowyg Plugin.
 
 | Item | Version | Download |
 |---|---|---|
 | [flextype](https://github.com/flextype/flextype) | 0.9.16 | [download](https://github.com/flextype/flextype/releases) |
 | [twig](https://github.com/flextype-plugins/twig) | >=2.0.0 | [download](https://github.com/flextype-plugins/twig/releases) |
+| [blueprints](https://github.com/flextype-plugins/blueprints) | >=1.0.0 | [download](https://github.com/flextype-plugins/blueprints/releases) |
 
 ## Installation
 
@@ -23,14 +22,14 @@ The following dependencies need to be installed for Trumbowyg Plugin.
 2. Create new folder `/project/plugins/trumbowyg`
 3. Download Trumbowyg Plugin and unzip plugin content to the folder `/project/plugins/trumbowyg`
 
-## Settings
+## Documentation
+
+### Settings
 
 | Key | Value | Description |
 |---|---|---|
 | enabled | true | true or false to disable the plugin |
 | priority | 41 | Plugin priority |
-
-## Documentation
 
 ## LICENSE
 [The MIT License (MIT)](https://github.com/flextype-plugins/trumbowyg/blob/master/LICENSE.txt)
