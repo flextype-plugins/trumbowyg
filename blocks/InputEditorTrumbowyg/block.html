@@ -18,12 +18,13 @@
 {% endif %}
 
 {% if block.properties.options %}
-    {% set options = arrays(flextype.registry.get("plugins.trumbowyg.settings.options")).toArray() %}
+    {% set defaultOptions = arrays(flextype.registry.get("plugins.trumbowyg.settings.blocks.InputEditorTrumbowyg.properties.options")).toArray() %}
     {% set blockOptions = arrays(block.properties.options).toArray() %}
-    {% set options = arrays(options).replace(blockOptions, true).toArray() %}
+    {% set options = arrays(defaultOptions).replace(blockOptions).toArray() %}
 {% else %}
-    {% set options = flextype.registry.get("plugins.trumbowyg.settings.options") %}
+    {% set options = flextype.registry.get("plugins.trumbowyg.settings.blocks.InputEditorTrumbowyg.properties.options") %}
 {% endif %}
+
 <input type="hidden" 
         {{ attr.name(block.properties.name, '__trumbowyg_') }} 
         value="{{ block.properties.name }}">
