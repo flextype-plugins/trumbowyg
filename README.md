@@ -37,8 +37,8 @@ priority: 41
 assetsLoadOnAdmin: true
 assetsLoadOnSite: false
 
-# Default Trumbowyg options
-defaultOptions: 
+# Trumbowyg options
+options: 
 
   # Localization
   #
@@ -170,7 +170,6 @@ defaultOptions:
     - link
     - viewHTML
     - insertImage
-    - formatting
 
   # Plugins
   #
@@ -180,7 +179,6 @@ defaultOptions:
 # Blocks
 blocks:
   InputEditorTrumbowyg:
-    name: InputEditorTrumbowyg
     template: plugins/trumbowyg/blocks/InputEditorTrumbowyg/block.html
 ```
 
