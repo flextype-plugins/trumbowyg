@@ -22,10 +22,10 @@ flextype('registry')->set('plugins.blueprints.settings.blocks.InputEditorTrumbow
  */                         
 if (flextype('registry')->get('flextype.settings.locale') == 'en_US') {
     $locale = 'en';
-    flextype('registry')->set('plugins.trumbowyg.settings.defaultOptions.lang', $locale);
+    flextype('registry')->set('plugins.trumbowyg.settings.options.lang', $locale);
 } else {
     $locale = strings(flextype('registry')->get('flextype.settings.locale'))->lower()->substr(0, 2)->toString();
-    flextype('registry')->set('plugins.trumbowyg.settings.defaultOptions.lang', $locale);
+    flextype('registry')->set('plugins.trumbowyg.settings.options.lang', $locale);
 }
 
 /**
