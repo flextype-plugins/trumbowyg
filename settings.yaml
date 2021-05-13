@@ -12,9 +12,8 @@ assetsLoadOnSite: false
 blocks:
   InputEditorTrumbowyg:
     properties:
-
-      id: asd
-      name: asd
+      id: trumbowyg
+      name: trumbowyg
       
       # Trumbowyg options
       options:
