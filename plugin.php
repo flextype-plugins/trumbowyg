@@ -15,17 +15,17 @@ namespace Flextype\Plugin\Trumbowyg;
  * Add Blueprint block `InputEditorTrumbowyg`
  */
 flextype('registry')->set('plugins.blueprints.settings.blocks.InputEditorTrumbowyg', 
-                          flextype('registry')->get('plugins.trumbowyg.settings.blocks.InputEditorTrumbowyg'));       
+                          flextype('registry')->get('plugins.trumbowyg.settings.blocks.InputEditorTrumbowyg'));                
 
 /**
  * Set Trumbowyg locale
  */                         
 if (flextype('registry')->get('flextype.settings.locale') == 'en_US') {
     $locale = 'en';
-    flextype('registry')->set('plugins.trumbowyg.settings.options.lang', $locale);
+    flextype('registry')->set('plugins.trumbowyg.settings.blocks.InputTrumbowyg.properties.options.lang', $locale);
 } else {
     $locale = strings(flextype('registry')->get('flextype.settings.locale'))->lower()->substr(0, 2)->toString();
-    flextype('registry')->set('plugins.trumbowyg.settings.options.lang', $locale);
+    flextype('registry')->set('plugins.trumbowyg.settings.blocks.InputTrumbowyg.properties.options.lang', $locale);
 }
 
 /**
