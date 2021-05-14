@@ -39,7 +39,7 @@ assetsLoadOnSite: false
 
 # Blocks
 blocks:
-  InputEditorTrumbowyg:
+  Trumbowyg:
     properties:
       id: trumbowyg
       name: trumbowyg
@@ -60,7 +60,7 @@ blocks:
         #
         # If you do not want SVG icons, you can set this option to `false`. 
         # Then, you can add your custom icons by CSS or what you want.
-        svgPath: ../../project/plugins/trumbowyg/blocks/InputEditorTrumbowyg/dist/fonts/trumbowyg/icons.svg
+        svgPath: ../../project/plugins/trumbowyg/blocks/Trumbowyg/dist/fonts/trumbowyg/icons.svg
 
         # Semantic
         #
@@ -177,7 +177,7 @@ blocks:
         # Available plugins https://alex-d.github.io/Trumbowyg/documentation/plugins/
         plugins: []
 
-    template: plugins/trumbowyg/blocks/InputEditorTrumbowyg/block.html
+    template: plugins/trumbowyg/blocks/Trumbowyg/block.html
 ```
 
 ## LICENSE

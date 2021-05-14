@@ -29,11 +29,11 @@ sass.compiler      = require('node-sass');
             cascade: false
         }))
         .pipe(csso())
-        .pipe(concat('block.min.css'))
+        .pipe(concat('trumbowyg.min.css'))
         .pipe(gulp.dest("blocks/InputEditorTrumbowyg/dist/css/"))
         .pipe(size({ showFiles: true }))
         .pipe(gzip())
-        .pipe(rename("block.min.css.gz"))
+        .pipe(rename("trumbowyg.min.css.gz"))
         .pipe(gulp.dest("blocks/InputEditorTrumbowyg/dist/css/"))
         .pipe(size({ showFiles: true, gzip: true }));
 });
@@ -53,11 +53,11 @@ sass.compiler      = require('node-sass');
             // Blocks
             'blocks/InputEditorTrumbowyg/block.js'
         ])
-        .pipe(concat('block.min.js'))
+        .pipe(concat('trumbowyg.min.js'))
         .pipe(size({ showFiles: true }))
         .pipe(gulp.dest('blocks/InputEditorTrumbowyg/dist/js/'))
         .pipe(gzip())
-        .pipe(rename("block.min.js.gz"))
+        .pipe(rename("trumbowyg.min.js.gz"))
         .pipe(gulp.dest("blocks/InputEditorTrumbowyg/dist/js/"))
         .pipe(size({ showFiles: true, gzip: true }));
 });

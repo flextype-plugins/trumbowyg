@@ -12,10 +12,10 @@ declare(strict_types=1);
 namespace Flextype\Plugin\Trumbowyg;
 
 /**
- * Add Blueprint block `InputEditorTrumbowyg`
+ * Add Blueprint block `Trumbowyg`
  */
-flextype('registry')->set('plugins.blueprints.settings.blocks.InputEditorTrumbowyg', 
-                          flextype('registry')->get('plugins.trumbowyg.settings.blocks.InputEditorTrumbowyg'));                
+flextype('registry')->set('plugins.blueprints.settings.blocks.Trumbowyg', 
+                          flextype('registry')->get('plugins.trumbowyg.settings.blocks.Trumbowyg'));                
 
 /**
  * Set Trumbowyg locale
@@ -31,11 +31,11 @@ if (flextype('registry')->get('flextype.settings.locale') == 'en_US') {
 /**
  * Add Trumbowyg assets
  */ 
-$trumbowygCSS[] = 'project/plugins/trumbowyg/blocks/InputEditorTrumbowyg/dist/css/block.min.css';
-$trumbowygJS[]  = 'project/plugins/trumbowyg/blocks/InputEditorTrumbowyg/dist/js/block.min.js';
+$trumbowygCSS[] = 'project/plugins/trumbowyg/blocks/Trumbowyg/dist/css/trumbowyg.min.css';
+$trumbowygJS[]  = 'project/plugins/trumbowyg/blocks/Trumbowyg/dist/js/trumbowyg.min.js';
 
 if ($locale !== 'en') {
-    $trumbowygJS[] = 'project/plugins/trumbowyg/blocks/InputEditorTrumbowyg/dist/lang/trumbowyg/langs/' . $locale . '.min.js';          
+    $trumbowygJS[] = 'project/plugins/trumbowyg/blocks/Trumbowyg/dist/lang/trumbowyg/langs/' . $locale . '.min.js';          
 } 
 
 if (flextype('registry')->get('plugins.trumbowyg.settings.assetsLoadOnAdmin')) {
