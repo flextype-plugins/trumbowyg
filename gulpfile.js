@@ -19,7 +19,7 @@ sass.compiler      = require('node-sass');
             'node_modules/trumbowyg/dist/plugins/table/ui/trumbowyg.table.css',
             
             // Blocks
-            'blocks/InputEditorTrumbowyg/block.scss',
+            'blocks/Trumbowyg/block.scss',
         ])
         .pipe(sass().on('error', sass.logError))
         .pipe(autoprefixer({
@@ -30,11 +30,11 @@ sass.compiler      = require('node-sass');
         }))
         .pipe(csso())
         .pipe(concat('trumbowyg.min.css'))
-        .pipe(gulp.dest("blocks/InputEditorTrumbowyg/dist/css/"))
+        .pipe(gulp.dest("blocks/Trumbowyg/dist/css/"))
         .pipe(size({ showFiles: true }))
         .pipe(gzip())
         .pipe(rename("trumbowyg.min.css.gz"))
-        .pipe(gulp.dest("blocks/InputEditorTrumbowyg/dist/css/"))
+        .pipe(gulp.dest("blocks/Trumbowyg/dist/css/"))
         .pipe(size({ showFiles: true, gzip: true }));
 });
 
@@ -51,14 +51,14 @@ sass.compiler      = require('node-sass');
             'node_modules/trumbowyg/dist/plugins/table/trumbowyg.table.min.js',
 
             // Blocks
-            'blocks/InputEditorTrumbowyg/block.js'
+            'blocks/Trumbowyg/block.js'
         ])
         .pipe(concat('trumbowyg.min.js'))
         .pipe(size({ showFiles: true }))
-        .pipe(gulp.dest('blocks/InputEditorTrumbowyg/dist/js/'))
+        .pipe(gulp.dest('blocks/Trumbowyg/dist/js/'))
         .pipe(gzip())
         .pipe(rename("trumbowyg.min.js.gz"))
-        .pipe(gulp.dest("blocks/InputEditorTrumbowyg/dist/js/"))
+        .pipe(gulp.dest("blocks/Trumbowyg/dist/js/"))
         .pipe(size({ showFiles: true, gzip: true }));
 });
 
@@ -70,7 +70,7 @@ sass.compiler      = require('node-sass');
     return gulp
         .src(['node_modules/trumbowyg/dist/ui/icons.svg'])
         .pipe(size({ showFiles: true }))
-        .pipe(gulp.dest('blocks/InputEditorTrumbowyg/dist/fonts/trumbowyg'));
+        .pipe(gulp.dest('blocks/Trumbowyg/dist/fonts/trumbowyg'));
 });
 
 /**
@@ -80,7 +80,7 @@ gulp.task('trumbowyg-langs', function () {
     return gulp
         .src(['node_modules/trumbowyg/dist/*langs/**/*.min.js'])
         .pipe(size({ showFiles: true }))
-        .pipe(gulp.dest('blocks/InputEditorTrumbowyg/dist/lang/trumbowyg'));
+        .pipe(gulp.dest('blocks/Trumbowyg/dist/lang/trumbowyg'));
 });
 
 /**
