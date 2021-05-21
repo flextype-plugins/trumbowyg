@@ -12,7 +12,6 @@ assetsLoadOnSite: false
 blocks:
   Trumbowyg:
     properties:
-      id: trumbowyg
       name: trumbowyg
       
       # Trumbowyg options
