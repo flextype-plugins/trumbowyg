@@ -1,9 +1,7 @@
 {% import "plugins/blueprints/blocks/macros/attr.html" as attr %}
 
 {% if block.properties %}
-    {% set defaultProperties = arrays(flextype.registry.get("plugins.trumbowyg.settings.blocks.Trumbowyg.properties")).toArray() %}
-    {% set blockProperties = arrays(block.properties).toArray() %}
-    {% set properties = arrays(defaultProperties).replace(blockProperties, true).toArray() %}
+    {% set properties = arrays(flextype.registry.get("plugins.trumbowyg.settings.blocks.Trumbowyg.properties")).replace(block.properties, true).toArray() %}
 {% else %}
     {% set properties = flextype.registry.get("plugins.trumbowyg.settings.blocks.Trumbowyg.properties") %}
 {% endif %}
