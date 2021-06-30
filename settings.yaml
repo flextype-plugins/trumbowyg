@@ -11,6 +11,7 @@ assetsLoadOnSite: false
 # Blocks
 blocks:
   Trumbowyg:
+    type: Trumbowyg
     properties:
       name: trumbowyg
       
