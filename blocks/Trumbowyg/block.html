@@ -6,27 +6,37 @@
     {% set properties = flextype.registry.get("plugins.trumbowyg.settings.blocks.Trumbowyg.properties") %}
 {% endif %}
 
-{% if properties.label %}
-    <label for="{{ properties.id }}"
-        {{ include(template_from_string(attr.class(['form-label', properties.label.class]))) }}
-        {{ include(template_from_string(attr.style(properties.label.style))) }}>{{ include(template_from_string(properties.label.value)) }}</label>
+{% set blockVisible = true %}
+{% if arrays(block).has('properties.visible') %}
+    {% if block.properties.visible is string %}
+        {% set blockVisible = include(template_from_string(block.properties.visible)) %}
+    {% else %}
+        {% set blockVisible = (block.properties.visible == true) ? true : false %}
+    {% endif %}
 {% endif %}
-<textarea {{ include(template_from_string(attr.id(properties.id))) }}
-        {{ include(template_from_string(attr.name(properties.name))) }}
-        rows="0"
-        cols="0"
-        {{ include(template_from_string(attr.data(properties.data))) }}
-        {{ include(template_from_string(attr.class(['js-trumbowyg', 'form-control', properties.class]))) }}
-        {{ include(template_from_string(attr.events(properties.events, ['onkeyup', 'onmousedown', 'onmousemove', 'onmouseout',
-                                                                        'onmouseover', 'onmouseup', 'onkeypress', 'onclick', 'ondblclick',
-                                                                        'onkeydown', 'onblur']))) }}>{{ include(template_from_string(attr.value(properties.name, values, properties.value, false))) }}</textarea>
-{% if properties.help %}
-    <small>{{ __(properties.help)}}</small>
-{% endif %}
+{% if blockVisible %}
+    {% if properties.label %}
+        <label for="{{ properties.id }}"
+            {{ include(template_from_string(attr.class(['form-label', properties.label.class]))) }}
+            {{ include(template_from_string(attr.style(properties.label.style))) }}>{{ include(template_from_string(properties.label.value)) }}</label>
+    {% endif %}
+    <textarea {{ include(template_from_string(attr.id(properties.id))) }}
+            {{ include(template_from_string(attr.name(properties.name))) }}
+            rows="0"
+            cols="0"
+            {{ include(template_from_string(attr.data(properties.data))) }}
+            {{ include(template_from_string(attr.class(['js-trumbowyg', 'form-control', properties.class]))) }}
+            {{ include(template_from_string(attr.events(properties.events, ['onkeyup', 'onmousedown', 'onmousemove', 'onmouseout',
+                                                                            'onmouseover', 'onmouseup', 'onkeypress', 'onclick', 'ondblclick',
+                                                                            'onkeydown', 'onblur']))) }}>{{ include(template_from_string(attr.value(properties.name, values, properties.value, false))) }}</textarea>
+    {% if properties.help %}
+        <small>{{ __(properties.help)}}</small>
+    {% endif %}
 
-<input type="hidden" 
-        {{ attr.name(properties.name, '__trumbowyg_') }} 
-        value="{{ properties.name }}">
-<input type="hidden" 
-        {{ attr.name(properties.name, '__trumbowyg_options_') }}
-        value='{{ flextype.serializers.json.encode(properties.options) }}'>
+    <input type="hidden" 
+            {{ attr.name(properties.name, '__trumbowyg_') }} 
+            value="{{ properties.name }}">
+    <input type="hidden" 
+            {{ attr.name(properties.name, '__trumbowyg_options_') }}
+            value='{{ flextype.serializers.json.encode(properties.options) }}'>
+{% endif %}
