@@ -1,9 +1,9 @@
 {% import "plugins/blueprints/blocks/macros/attr.html" as attr %}
 
 {% if block.properties %}
-    {% set properties = arrays(flextype.registry.get("plugins.trumbowyg.settings.blocks.Trumbowyg.properties")).replace(block.properties, true).toArray() %}
+    {% set properties = arrays(registry().get("plugins.trumbowyg.settings.blocks.Trumbowyg.properties")).replace(block.properties, true).toArray() %}
 {% else %}
-    {% set properties = flextype.registry.get("plugins.trumbowyg.settings.blocks.Trumbowyg.properties") %}
+    {% set properties = registry().get("plugins.trumbowyg.settings.blocks.Trumbowyg.properties") %}
 {% endif %}
 
 {% set blockVisible = true %}
@@ -38,5 +38,5 @@
             value="{{ properties.name }}">
     <input type="hidden" 
             {{ attr.name(properties.name, '__trumbowyg_options_') }}
-            value='{{ flextype.serializers.json.encode(properties.options) }}'>
+            value='{{ serializers().json.encode(properties.options) }}'>
 {% endif %}
